@@ -19,9 +19,19 @@ module.exports = {
         liveReload: true,
     },
 
-    plugins: [new HtmlWebpackPlugin({
+    plugins: [
+        new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "index.html"),
         favicon: path.resolve("src", "assets", "scissors.svg"),
         }),
     ],
+
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
 }

@@ -26,7 +26,8 @@ export function scheduleShow( {dailySchedules} ){
             name.textContent = schedule.name
 
             // Cria o ícone de cancelar o agendamento
-            const cancelIcon = document.classList.add("cancel-icon")
+            const cancelIcon = document.createElement("img")
+            cancelIcon.classList.add("cancel-icon")
             cancelIcon.setAttribute("src", "./src/assets/cancel.svg")
             cancelIcon.setAttribute("alt", "Cancelar")
 
